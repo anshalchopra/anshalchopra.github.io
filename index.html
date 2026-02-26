@@ -3,61 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anshal's Portfolio</title>
+    <title>Anshal Chopra | Portfolio</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-        body { padding-top: 20px; } /* Adds space so content doesn't hit the top edge */
-        .navbar-brand { font-weight: bold; }
+        /* --- 1. VIDEO HEADER STYLES --- */
+        .video-header {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            background-color: #000; /* Fallback color */
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-header video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures video fills the rectangle without stretching */
+        }
+
+        /* --- 2. NAVBAR CUSTOM COLORS --- */
+        .custom-navbar {
+            background-color: #071011 !important; /* Rich Black */
+        }
+
+        /* Default Link Color (White/Light Gray so it's visible on black) */
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            transition: color 0.3s ease; /* Smooth transition effect */
+            font-weight: 500;
+        }
+
+        /* HOVER COLOR (Hunyadi Yellow) */
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #E6A835 !important; 
+        }
+
+        /* Active Link Color (Keep Yellow if on that page) */
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #E6A835 !important;
+        }
+        
+        /* Brand Name (Your Name) Color */
+        .navbar-dark .navbar-brand {
+            color: #fff !important;
+        }
+        .navbar-dark .navbar-brand:hover {
+            color: #E6A835 !important;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="video-header">
+        <video autoplay muted loop playsinline poster="assets/video-placeholder.jpg">
+            <source src="assets/banner-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Anshal Chopra</a>
-
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto"> <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="blogs.html">Blogs</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="case-studies.html">Case Studies</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="socials.html">Socials</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socials.html">Socials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <h1 class="display-5 fw-bold">Welcome to my Portfolio</h1>
-            <p class="col-md-8 fs-4">I am a Data Scientist specializing in Python, SQL, and Analytics Engineering.</p>
-            <a class="btn btn-primary btn-lg" href="projects.html">View My Work</a>
-        </div>
+    <div class="container mt-5">
+        <h1>Welcome</h1>
+        <p>Your content goes here...</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
