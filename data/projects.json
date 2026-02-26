@@ -1,0 +1,92 @@
+[
+    {
+        "id": "proj_01",
+        "tag": "Pipeline",
+        "title": "Real-Time Retail Analytics Engine",
+        "sub": "Python · Kafka · Snowflake",
+        "description": "Streaming POS events via Kafka → dbt → live Streamlit dashboard. 50 k events/min at sub-second latency.",
+        "body": "An end-to-end <span class='modal-highlight'>streaming pipeline</span> ingesting point-of-sale events via Kafka, transforming them in dbt, and surfacing a live Streamlit dashboard. Handles 50 k events/min at sub-second latency.",
+        "img": "../assets/images/banner.png"
+    },
+    {
+        "id": "proj_02",
+        "tag": "ML Model",
+        "title": "Customer Churn Prediction",
+        "sub": "XGBoost · SHAP · FastAPI",
+        "description": "AUC 0.91 on 2M-row telecom data. FastAPI serving with SHAP explainability endpoint for product decisions.",
+        "body": "A production-grade churn classifier achieving <span class='modal-highlight'>AUC 0.91</span> on a 2M-row telecom dataset. Model served via FastAPI, with SHAP explainability endpoint for the product team.",
+        "img": "../assets/images/Data Science Inc.webp"
+    },
+    {
+        "id": "proj_03",
+        "tag": "NLP",
+        "title": "Academic Paper Summariser",
+        "sub": "Python · Transformers · Streamlit",
+        "description": "Fine-tuned BART on arxiv corpus. Structured, jargon-aware paper summaries — 300+ monthly users.",
+        "body": "Fine-tuned a <span class='modal-highlight'>BART model</span> on a curated arxiv corpus to produce structured, jargon-aware summaries of academic CS papers. Deployed as a public Streamlit app with 300+ monthly active users.",
+        "img": "../assets/images/Simon Fraser University.png"
+    },
+    {
+        "id": "proj_04",
+        "tag": "Dashboard",
+        "title": "Inventory Optimisation Dashboard",
+        "sub": "Python · Tableau · SQL",
+        "description": "Stock-out risk scores and reorder triggers reducing retail overstock by 18%.",
+        "body": "Built for a retail client to surface <span class='modal-highlight'>stock-out risk scores</span> and reorder triggers. Combines historical sell-through rates with supplier lead-time variability to reduce overstock by 18%.",
+        "img": "../assets/images/Canadian Tire.png"
+    },
+    {
+        "id": "proj_05",
+        "tag": "Research",
+        "title": "Bias Detection in Hiring Datasets",
+        "sub": "Python · Fairlearn · Pandas",
+        "description": "Auditing public hiring data for disparate impact and calibration bias across gender and ethnicity.",
+        "body": "An SFU research project auditing three public hiring datasets for <span class='modal-highlight'>disparate impact and calibration bias</span> across gender and ethnicity dimensions. Includes a reweighing pre-processor pipeline.",
+        "img": "../assets/images/Delhi Public School.avif"
+    },
+    {
+        "id": "proj_06",
+        "tag": "Forecasting",
+        "title": "Demand Forecasting with Prophet",
+        "sub": "Python · Prophet · Airflow",
+        "description": "200+ SKU forecasts with holiday regressors and zero-touch weekly retraining via Airflow.",
+        "body": "Weekly demand forecasts for 200+ product SKUs using <span class='modal-highlight'>Facebook Prophet with holiday regressors</span> and multiplicative seasonality. Orchestrated with Airflow for zero-touch weekly retraining.",
+        "img": "../assets/images/banner.png"
+    },
+    {
+        "id": "proj_07",
+        "tag": "Data Eng",
+        "title": "dbt Semantic Layer Implementation",
+        "sub": "dbt · Snowflake · Looker",
+        "description": "300-model migration cutting BI query duplication 60% and analyst on-boarding from 3 weeks to 4 days.",
+        "body": "Migrated a 300-model legacy warehouse to <span class='modal-highlight'>dbt Core with a semantic layer</span>, reducing BI query duplication by 60% and cutting analyst on-boarding time from 3 weeks to 4 days.",
+        "img": "../assets/images/Data Science Inc.webp"
+    },
+    {
+        "id": "proj_08",
+        "tag": "Computer Vision",
+        "title": "Shelf Occupancy Monitor",
+        "sub": "PyTorch · OpenCV · Raspberry Pi",
+        "description": "YOLOv8 on Raspberry Pi detecting empty shelf slots and pushing real-time stock-out Slack alerts.",
+        "body": "A lightweight <span class='modal-highlight'>YOLOv8 model</span> deployed on a Raspberry Pi 5 to detect empty shelf slots in real time and push stock-out alerts to a Slack channel — built during a hackathon in 36 hours.",
+        "img": "../assets/images/Simon Fraser University.png"
+    },
+    {
+        "id": "proj_09",
+        "tag": "AB Testing",
+        "title": "Experimentation Framework",
+        "sub": "Python · PostgreSQL · Flask",
+        "description": "Internal A/B platform with frequentist & Bayesian methods, auto sample sizing, and live significance tracking.",
+        "body": "An internal A/B testing platform supporting <span class='modal-highlight'>frequentist and Bayesian approaches</span>, automatic sample-size calculation, and a real-time significance dashboard — replacing spreadsheet-based experiment tracking.",
+        "img": "../assets/images/Canadian Tire.png"
+    },
+    {
+        "id": "proj_10",
+        "tag": "NLU",
+        "title": "Interview Prep Chatbot",
+        "sub": "LangChain · OpenAI · Streamlit",
+        "description": "RAG chatbot ingesting résumé + JD, simulating a behavioural interview with STAR-method feedback.",
+        "body": "A <span class='modal-highlight'>Retrieval-Augmented Generation chatbot</span> that ingests a user's résumé and a job description, then conducts a simulated behavioural interview — providing structured STAR-method feedback after each response.",
+        "img": "../assets/images/Delhi Public School.avif"
+    }
+]
