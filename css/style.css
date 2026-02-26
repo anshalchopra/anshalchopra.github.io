@@ -64,36 +64,41 @@ html, body {
     color: #E6A835 !important; /* Hunyadi Yellow */
 }
 
-/* --- WEATHER WIDGET (LEFT ALIGNED) --- */
+/* --- WEATHER WIDGET (STRICT OVERRIDE) --- */
 .widget-container {
     display: flex;
     align-items: center;
-    margin-left: 0.1;
+    margin-left: 0;
+    font-family: 'Noto Serif', serif !important; /* Force Noto Serif on Laptop */
 }
 
 .widget-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Keeps text aligned to the far left */
+    align-items: flex-start;
     line-height: 1.1;
 }
 
 .widget-location {
-    color: #E6A835; /* Hunyadi Yellow */
-    font-weight: 700;
+    color: #E6A835 !important; /* Force Hunyadi Yellow */
+    font-weight: 700 !important;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .widget-weather {
-    color: #E6A835; /* Hunyadi Yellow */
+    color: #E6A835 !important; /* Force Hunyadi Yellow */
     font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
+/* Ensure the text inside the widget isn't being treated as a clickable link */
+.widget-details div, .widget-details span {
+    text-decoration: none !important;
+}
 /* --- MOBILE TOGGLER (YELLOW) --- */
 .navbar-toggler {
     border-color: #E6A835 !important;
