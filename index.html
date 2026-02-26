@@ -1,68 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anshal Chopra | Portfolio</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header class="hero-banner">
-        <div class="hero-content">
-            <h1>Anshal Chopra</h1>
-            <p>Data Scientist | Data Engineer | Analytics Engineer</p>
-        </div>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-        <div class="container">
-            <div class="widget-container d-flex flex-column">
-                <div style="color: #E6A835; font-weight: 700; font-size: 1.1rem;">BURNABY, BC</div>
-                <div style="color: #E6A835; font-size: 1rem;">
-                    <span id="weather-icon"></span> <span id="temperature">Loading...</span>
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid px-4"> <div class="widget-container">
+            <div class="widget-details">
+                <div class="widget-location">Burnaby, BC</div>
+                <div class="widget-weather">
+                    <span id="weather-icon"></span>
+                    <span id="temperature">Loading...</span>
                 </div>
             </div>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="socials.html">Socials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
         </div>
-    </nav>
-
-    <div class="container mt-5">
-        <h2 class="text-center" style="color: #E6A835;">Welcome</h2>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+                <li class="nav-item"><a class="nav-link" href="socials.html">Socials</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        async function fetchWeather() {
-            try {
-                const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=49.2488&longitude=-122.9805&current_weather=true');
-                const data = await res.json();
-                document.getElementById('temperature').innerText = Math.round(data.current_weather.temperature) + '°C';
-                document.getElementById('weather-icon').innerText = "⛅"; // Simple fallback
-            } catch (e) { console.error(e); }
-        }
-        fetchWeather();
-    </script>
-</body>
-</html>
+</nav>
