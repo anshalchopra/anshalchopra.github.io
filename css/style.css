@@ -1,87 +1,55 @@
-/* css/style.css */
+/* Global Font Reset */
+html, body {
+    font-family: 'Noto Serif', serif; /* Global Noto Serif */
+    background-color: #071011; /* Rich Black background for the page */
+    color: #91A0AA; /* Default Cadet Grey text */
+}
 
-/* --- 1. HERO BANNER --- */
+/* --- HERO BANNER --- */
 .hero-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                url('../assets/banner.png'); /* Note the '../' to go up one folder */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
+                url('../assets/banner.png'); 
     background-size: cover;     
     background-position: center; 
-    background-repeat: no-repeat;
-    height: 300px;
+    height: 300px; /* This is the height of the RECTANGLE */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .hero-content {
     text-align: center;
-    z-index: 2;
-    margin-top: 80px; 
+    /* Adjust this to move text up or down within the 400px banner */
+    margin-top: 100px; 
 }
 
 .hero-content h1 {
     color: #E6A835; /* Hunyadi Yellow */
-    font-family: 'Noto Serif', serif; 
-    font-size: 2.8rem; 
-    font-weight: 400; 
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem; /* Height/Size of the Name */
+    font-weight: 700;
+    margin-bottom: 0.2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .hero-content p {
     color: #91A0AA; /* Cadet Grey */
-    font-family: 'Noto Serif', serif; 
-    font-size: 0.8rem;
+    font-size: 0.7rem; /* Height/Size of the Title */
     letter-spacing: 1px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-/* --- 2. NAVBAR STYLES --- */
+/* --- NAVBAR --- */
 .custom-navbar {
-    background-color: #071011 !important; /* Rich Black */
-    padding: 10px 0;
-    border-bottom: 1px solid #222; 
+    background-color: #071011 !important;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #91A0AA !important; 
-    font-family: system-ui, -apple-system, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-right: 20px;
+    color: #91A0AA !important;
+    font-family: 'Noto Serif', serif; /* Ensuring Noto Serif on Nav */
     transition: color 0.3s ease;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #E6A835 !important; 
-}
-
+.navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #E6A835 !important;
-}
-
-/* --- 3. IOS WIDGET STYLES --- */
-.ios-widget {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.2;
-}
-
-.ios-time {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-}
-
-.ios-details {
-    font-size: 0.85rem;
-    color: #91A0AA; 
-    display: flex;
-    align-items: center;
-    gap: 8px; 
 }
