@@ -11,88 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
     
-    <style>
-        /* --- 1. HERO BANNER --- */
-        .hero-banner {
-            /* Background: Dark tint (0.3) over your banner.png */
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
-                        url('assets/banner.png'); 
-            
-            background-size: cover;     
-            background-position: center; 
-            background-repeat: no-repeat;
-            
-            height: 300px;
-            width: 100%;
-            display: flex;
-            align-items: center; /* Vertically centers the content block */
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 2;
-            /* MOVES TEXT LOWER: Adjust this number (e.g., 100px) to go lower */
-            margin-top: 80px; 
-        }
-        
-        /* THE NAME (Anshal Chopra) */
-        .hero-content h1 {
-            color: #E6A835; /* Hunyadi Yellow */
-            font-family: 'Noto Serif', serif; 
-            font-size: 3rem; 
-            font-weight: 400; 
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        }
-
-        /* THE TITLE */
-        .hero-content p {
-            color: #91A0AA; /* Cadet Grey */
-            font-family: 'Noto Serif', serif; 
-            font-size: 1rem;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-        }
-
-        /* --- 2. NAVBAR STYLES --- */
-        .custom-navbar {
-            background-color: #071011 !important; /* Rich Black */
-            padding: 15px 0;
-            border-bottom: 1px solid #222; 
-        }
-
-        /* Default Link Color -> #91A0AA */
-        .navbar-dark .navbar-nav .nav-link {
-            color: #91A0AA !important; 
-            font-family: sans-serif;
-            font-weight: 500;
-            text-transform: uppercase;
-            margin-right: 20px;
-            transition: color 0.3s ease;
-        }
-
-        /* HOVER COLOR -> #E6A835 */
-        .navbar-dark .navbar-nav .nav-link:hover {
-            color: #E6A835 !important; 
-        }
-
-        /* ACTIVE PAGE COLOR -> #E6A835 */
-        .navbar-dark .navbar-nav .nav-link.active {
-            color: #E6A835 !important;
-        }
-
-        /* BRAND LOGO */
-        .navbar-brand {
-            font-family: 'Noto Serif', serif;
-            font-size: 1.5rem;
-            color: #E6A835 !important;
-        }
-        .navbar-brand:hover {
-            color: #fff !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -105,7 +24,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Anshal Chopra</a>
+            
+            <div class="ios-widget">
+                <div class="ios-time" id="clock">--:--</div>
+                
+                <div class="ios-details">
+                    <span id="weather-icon"></span>
+                    <span id="temperature"></span>
+                    <span>|</span>
+                    <span>Burnaby, BC</span>
+                </div>
+            </div>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -116,23 +45,4 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="socials.html">Socials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2>Welcome</h2>
-                <p>Select a tab above to view my work.</p>
-            </div>
-        </div>
-    </div>
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body> </html>
+                    <li
