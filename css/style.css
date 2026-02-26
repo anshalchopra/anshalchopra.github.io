@@ -1,8 +1,10 @@
-/* Global Font Reset */
+/* Global Reset and Font */
 html, body {
-    font-family: 'Noto Serif', serif; /* Global Noto Serif */
-    background-color: #071011; /* Rich Black background for the page */
-    color: #91A0AA; /* Default Cadet Grey text */
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif', serif; /* Global Font Preference */
+    background-color: #071011; /* Rich Black */
+    color: #91A0AA; /* Cadet Grey */
 }
 
 /* --- HERO BANNER --- */
@@ -11,22 +13,24 @@ html, body {
                 url('../assets/banner.png'); 
     background-size: cover;     
     background-position: center; 
-    height: 300px; /* This is the height of the RECTANGLE */
+    background-repeat: no-repeat;
+    height: 400px; /* Rectangular height */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .hero-content {
     text-align: center;
-    /* Adjust this to move text up or down within the 400px banner */
-    margin-top: 100px; 
+    z-index: 2;
+    margin-top: 100px; /* Adjust this to move name/title lower */
 }
 
 .hero-content h1 {
     color: #E6A835; /* Hunyadi Yellow */
-    font-size: 3.5rem; /* Height/Size of the Name */
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 0.2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
@@ -34,22 +38,67 @@ html, body {
 
 .hero-content p {
     color: #91A0AA; /* Cadet Grey */
-    font-size: 0.7rem; /* Height/Size of the Title */
+    font-size: 1.2rem;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-/* --- NAVBAR --- */
+/* --- NAVBAR STYLES --- */
 .custom-navbar {
-    background-color: #071011 !important;
+    background-color: #071011 !important; /* Rich Black */
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
 }
 
+/* Links */
 .navbar-dark .navbar-nav .nav-link {
-    color: #91A0AA !important;
-    font-family: 'Noto Serif', serif; /* Ensuring Noto Serif on Nav */
+    color: #91A0AA !important; /* Cadet Grey */
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 20px;
     transition: color 0.3s ease;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #E6A835 !important;
+    color: #E6A835 !important; /* Hunyadi Yellow */
+}
+
+/* --- WEATHER WIDGET (LEFT ALIGNED) --- */
+.widget-container {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.widget-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keeps text aligned to the far left */
+    line-height: 1.1;
+}
+
+.widget-location {
+    color: #E6A835; /* Hunyadi Yellow */
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.widget-weather {
+    color: #E6A835; /* Hunyadi Yellow */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- MOBILE TOGGLER (YELLOW) --- */
+.navbar-toggler {
+    border-color: #E6A835 !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23E6A835' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
