@@ -14,7 +14,7 @@ html, body {
     background-size: cover;     
     background-position: center; 
     background-repeat: no-repeat;
-    height: 400px; /* Rectangular height */
+    height: 300px; /* Rectangular height */
     width: 100%;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ html, body {
 
 .hero-content p {
     color: #91A0AA; /* Cadet Grey */
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
@@ -68,7 +68,7 @@ html, body {
 .widget-container {
     display: flex;
     align-items: center;
-    margin-left: 0;
+    margin-left: 0.1;
 }
 
 .widget-details {
