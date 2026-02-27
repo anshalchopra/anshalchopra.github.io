@@ -1,0 +1,54 @@
+[
+    {
+        "category": "Education & Academic Leadership",
+        "items": [
+            {
+                "year": "2003 – 2018",
+                "title": "High School Diploma",
+                "org": "Delhi Public School",
+                "logo": "assets/images/Delhi Public School.avif",
+                "body": "<p>May 2003 – April 2018.</p><ul><li>Achieved 96% overall in Grade 10 and 90% in the core Science track for Grade 12.</li><li>Served as House Prefect for two terms and represented the school in District, State, and Interschool Athletics competitions.</li></ul>"
+            },
+            {
+                "year": "2018 – 2025",
+                "title": "Bachelor of Science (Co-op), Major in Data Science",
+                "org": "Simon Fraser University",
+                "logo": "assets/images/Simon Fraser University.png",
+                "body": "<p>Graduated 2025.</p><ul><li><strong>Relevant Coursework:</strong> Database Systems, Big Data, Computational Data Science, Data Structures &amp; Algorithms, Multivariate Analysis, Statistical Learning &amp; Prediction, Business Process Analysis, Natural Language Processing, and Time-Series Forecasting.</li><li><strong>Technical Leadership:</strong> Active member of the Data Science Student Society. Organized departmental events and led live, hands-on workshops teaching advanced SQL querying and Python data manipulation to peers.</li></ul>"
+            }
+        ]
+    },
+    {
+        "category": "Professional Experience & Architecture",
+        "items": [
+            {
+                "year": "Dec 2021 – Apr 2022",
+                "title": "Research Analyst",
+                "org": "Simon Fraser University",
+                "logo": "assets/images/Simon Fraser University.png",
+                "body": "<ul><li>Cleaned and preprocessed 10K+ rows of data using Python and regex, enabling faster analysis.</li><li>Performed sentiment analysis on medical reviews using AWS Comprehend (Python + Boto3) and exported structured results for actionable reporting.</li></ul>"
+            },
+            {
+                "year": "May 2022 – Aug 2022 & Dec 2023 – Jan 2024",
+                "title": "Data Analyst (Analytics & Modeling)",
+                "org": "Data Sciences Inc.",
+                "logo": "assets/images/Data Science Inc.webp",
+                "body": "<ul><li>Developed an end-to-end ML data pipeline for forecasting, integrating automated feature engineering and SMOTE balancing on 8M+ records to improve Random Forest and XGBoost ensemble accuracy by 4%.</li><li>Engineered a high-performance data model for Shopify transactions, optimizing complex joins and indexing to slash report latency by 30% and reduce query size by 25%.</li><li>Implemented fault-tolerant Python (Scrapy) pipelines with dynamic proxy and user-agent rotation to bypass anti-bot measures across 15+ sources, eliminating 80% of manual data collection.</li></ul>"
+            },
+            {
+                "year": "Jan 2023 – Dec 2023",
+                "title": "Business Intelligence Analyst (Transportation Operations)",
+                "org": "Canadian Tire Corporation",
+                "logo": "assets/images/Canadian Tire.png",
+                "body": "<ul><li>Designed a normalized 3NF SQL schema to replace legacy flat-files, implementing strict data validation checks to ensure a robust foundation for real-time Power BI dashboards.</li><li>Engineered a performance optimization for Bill of Lading (BOL) validation, reducing query runtime by 85% (from 20 minutes to under 3 minutes) via targeted SQL indexing and join restructuring.</li><li>Automated ETL workflows using Python, SQL, and Azure, saving $50k+ annually in manual processing costs and eliminating human error in financial reporting.</li></ul>"
+            },
+            {
+                "year": "Aug 2024 – Dec 2024",
+                "title": "Data Strategy Consultant (Capstone)",
+                "org": "Simon Fraser University — Covenant House & Slalom Consulting",
+                "logo": "assets/images/Simon Fraser University.png",
+                "body": "<ul><li>Partnered with Slalom Consulting to analyze 1M+ service records, utilizing PCA and Random Forest to reduce dimensionality (from 120 to 20 variables) and identify key drivers of youth housing outcomes.</li><li>Built survival analysis models to predict changes in length of stay, identifying specific interventions that improved retention rates by 15% across the target demographic.</li><li>Delivered a predictive Tableau dashboard that directly influenced the adoption of two new data-driven intake protocols by non-profit leadership.</li></ul>"
+            }
+        ]
+    }
+]

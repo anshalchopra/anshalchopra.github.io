@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anshal Chopra | Portfolio</title>
+    <meta name="description"
+        content="Anshal Chopra — End-to-end Data Scientist and Pipeline Developer focused on financial systems, equity markets, NLP, and time-series forecasting.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,6 +36,9 @@
     <div id="navbar-container"></div>
     <div id="timeline-overlay"></div>
 
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
     <section id="about" class="about-section reveal">
         <div class="about-container">
             <h2 class="about-title">About Me</h2>
@@ -43,20 +47,8 @@
                     <div class="about-ring"></div>
                     <img src="assets/images/Linkedin Headshot.jpeg" alt="Anshal Chopra" class="about-image">
                 </div>
-                <div class="about-text">
-                    <p>
-                        I am a <span class="highlight">Data Scientist</span> and <span class="highlight">Engineer</span>
-                        passionate about transforming complex datasets into actionable insights. With a strong
-                        foundation in computational statistics and machine learning from <span class="highlight">Simon
-                            Fraser University</span>, I bridge the gap between rigorous analysis and scalable data
-                        infrastructure.
-                    </p>
-                    <p>
-                        My experience spans across <span class="highlight">analytics engineering</span>, <span
-                            class="highlight">business strategy</span>, and <span class="highlight">academic
-                            research</span>. I thrive in environments where data meets decision-making, ensuring that
-                        information is not just processed, but utilized to drive innovation and efficiency.
-                    </p>
+                <div class="about-text" id="about-text-dynamic">
+                    <!-- Populated from data/config.json by site-renderer.js -->
                 </div>
             </div>
         </div>
@@ -64,88 +56,40 @@
 
     <div class="section-divider"></div>
 
+    <!-- ============================================================
+         TECH STACK
+         ============================================================ -->
+    <section id="stack" class="stack-section reveal">
+        <div class="stack-container">
+            <h2 class="stack-title">Stack</h2>
+
+            <div class="stack-grid" id="stack-grid-dynamic">
+                <!-- Populated from data/tools.json by site-renderer.js -->
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ============================================================
+         TIMELINE — VERTICAL LAYOUT
+         ============================================================ -->
     <section class="timeline-section reveal">
         <div class="container">
             <h2 class="timeline-title text-center">Timeline</h2>
-            <div class="timeline">
-                <!-- DPS -->
-                <div class="timeline-container">
-                    <span class="date">2017 - 2018</span>
-                    <div class="timeline-content">
-                        <img src="assets/images/Delhi Public School.avif" alt="School" class="timeline-img">
-                        <div class="timeline-body">
-                            <h3>Grade 12 Science</h3>
-                            <div class="subtitle">Delhi Public School</div>
-                            <div class="location">Jalandhar, Punjab, India</div>
-                            <p>Completed senior secondary education with a focus on Physics, Chemistry, and Mathematics.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- SFU BS -->
-                <div class="timeline-container">
-                    <span class="date">2018 - 2025</span>
-                    <div class="timeline-content">
-                        <img src="assets/images/Simon Fraser University.png" alt="University" class="timeline-img">
-                        <div class="timeline-body">
-                            <h3>B.Sc. (Data Science)</h3>
-                            <div class="subtitle">Simon Fraser University</div>
-                            <div class="location">Burnaby, BC, Canada</div>
-                            <p>Specializing in computational statistics, machine learning, and data-driven problem
-                                solving.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- RA SFU -->
-                <div class="timeline-container">
-                    <span class="date">2021 - 2022</span>
-                    <div class="timeline-content">
-                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800"
-                            alt="Research" class="timeline-img">
-                        <div class="timeline-body">
-                            <h3>Research Assistant</h3>
-                            <div class="subtitle">Simon Fraser University</div>
-                            <div class="location">Burnaby, BC, Canada</div>
-                            <p>Contributing to academic research projects, focusing on data extraction and preliminary
-                                analysis.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Data Sciences Inc -->
-                <div class="timeline-container">
-                    <span class="date">2022</span>
-                    <div class="timeline-content">
-                        <img src="assets/images/Data Science Inc.webp" alt="Internship" class="timeline-img">
-                        <div class="timeline-body">
-                            <h3>Data Analytics Intern</h3>
-                            <div class="subtitle">Data Sciences Inc.</div>
-                            <div class="location">Montreal, QC, Canada</div>
-                            <p>Analyzing complex datasets and building visualizations to support client decision-making.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- CTC -->
-                <div class="timeline-container">
-                    <span class="date">2023</span>
-                    <div class="timeline-content">
-                        <img src="assets/images/Canadian Tire.png" alt="Internship" class="timeline-img">
-                        <div class="timeline-body">
-                            <h3>Business Analyst Intern</h3>
-                            <div class="subtitle">Canadian Tire Corporation</div>
-                            <div class="location">Mississauga, ON, Canada</div>
-                            <p>Optimizing business processes and leveraging data to drive retail strategy and
-                                efficiency.</p>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="timeline-vertical" id="timeline-dynamic">
+                <!-- Populated from data/timeline.json by site-renderer.js -->
             </div>
+        </div>
     </section>
+
+    <div id="footer-container"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/navigation.js"></script>
-
-
+    <script src="js/site-renderer.js"></script>
+    <script src="js/footer.js"></script>
 
 </body>
 

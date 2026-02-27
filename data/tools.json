@@ -1,0 +1,170 @@
+[
+    {
+        "label": "Data Layer",
+        "sub": "Ingestion, Storage & Orchestration",
+        "tools": [
+            {
+                "name": "Kafka",
+                "icon": "kafka.svg",
+                "title": "Apache Kafka"
+            },
+            {
+                "name": "Flink",
+                "icon": "flink.svg",
+                "title": "Apache Flink"
+            },
+            {
+                "name": "Snowflake",
+                "icon": "snowflake.svg",
+                "title": "Snowflake"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "postgresql.svg",
+                "title": "PostgreSQL"
+            },
+            {
+                "name": "Pinecone",
+                "icon": "pinecone.svg",
+                "title": "Pinecone"
+            },
+            {
+                "name": "Chroma",
+                "icon": "chroma.svg",
+                "title": "Chroma"
+            },
+            {
+                "name": "Airflow",
+                "icon": "airflow.svg",
+                "title": "Apache Airflow"
+            },
+            {
+                "name": "dbt",
+                "icon": "dbt.svg",
+                "title": "dbt"
+            },
+            {
+                "name": "PySpark",
+                "icon": "pyspark.svg",
+                "title": "PySpark"
+            }
+        ]
+    },
+    {
+        "label": "ML & Intelligence",
+        "sub": "Modeling, NLP & LLM Orchestration",
+        "tools": [
+            {
+                "name": "Python",
+                "icon": "python.svg",
+                "title": "Python"
+            },
+            {
+                "name": "R / RStudio",
+                "icon": "r.svg",
+                "title": "R / RStudio"
+            },
+            {
+                "name": "PyTorch",
+                "icon": "pytorch.svg",
+                "title": "PyTorch"
+            },
+            {
+                "name": "Hugging Face",
+                "icon": "huggingface.svg",
+                "title": "Hugging Face"
+            },
+            {
+                "name": "XGBoost",
+                "icon": "xgboost.svg",
+                "title": "XGBoost"
+            },
+            {
+                "name": "Scikit-learn",
+                "icon": "scikitlearn.svg",
+                "title": "Scikit-learn"
+            },
+            {
+                "name": "Statsmodels",
+                "icon": "statsmodels.svg",
+                "title": "Statsmodels"
+            },
+            {
+                "name": "Pandas",
+                "icon": "pandas.svg",
+                "title": "Pandas"
+            },
+            {
+                "name": "NumPy",
+                "icon": "numpy.svg",
+                "title": "NumPy"
+            },
+            {
+                "name": "spaCy",
+                "icon": "spacy.svg",
+                "title": "spaCy"
+            },
+            {
+                "name": "LangChain",
+                "icon": "langchain.svg",
+                "title": "LangChain"
+            },
+            {
+                "name": "LlamaIndex",
+                "icon": "llamaindex.svg",
+                "title": "LlamaIndex"
+            },
+            {
+                "name": "OpenAI / LLMs",
+                "icon": "openai.svg",
+                "title": "OpenAI / Local LLMs"
+            }
+        ]
+    },
+    {
+        "label": "DevOps & Delivery",
+        "sub": "MLOps, Deployment & Serving",
+        "tools": [
+            {
+                "name": "MLflow",
+                "icon": "mlflow.svg",
+                "title": "MLflow"
+            },
+            {
+                "name": "Docker",
+                "icon": "docker.svg",
+                "title": "Docker"
+            },
+            {
+                "name": "GitHub Actions",
+                "icon": "githubactions.svg",
+                "title": "GitHub Actions"
+            },
+            {
+                "name": "AWS",
+                "icon": "aws.svg",
+                "title": "AWS"
+            },
+            {
+                "name": "Flask",
+                "icon": "flask.svg",
+                "title": "Flask"
+            },
+            {
+                "name": "Postman",
+                "icon": "postman.svg",
+                "title": "Postman"
+            },
+            {
+                "name": "Streamlit",
+                "icon": "streamlit.svg",
+                "title": "Streamlit"
+            },
+            {
+                "name": "Power BI",
+                "icon": "powerbi.svg",
+                "title": "Power BI"
+            }
+        ]
+    }
+]

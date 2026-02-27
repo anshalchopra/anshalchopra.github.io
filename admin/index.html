@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Portfolio CMS</title>
+    <link href="https://fonts.cdnfonts.com/css/garet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ═══════════ LOGIN SCREEN ═══════════ -->
+    <div id="login-screen" class="admin-login">
+        <div class="login-card">
+            <h1>Portfolio CMS</h1>
+            <p>Connect your GitHub repo to manage content.</p>
+            <div id="login-error" class="login-error"></div>
+            <div class="field">
+                <label>Personal Access Token</label>
+                <input type="password" id="pat-input" placeholder="ghp_xxxxxxxxxxxx" autocomplete="off">
+            </div>
+            <div class="field">
+                <label>Repository Owner</label>
+                <input type="text" id="owner-input" placeholder="anshalchopra">
+            </div>
+            <div class="field">
+                <label>Repository Name</label>
+                <input type="text" id="repo-input" placeholder="anshalchopra.github.io">
+            </div>
+            <button id="login-btn" class="btn-gold">Connect to GitHub</button>
+        </div>
+    </div>
+
+    <!-- ═══════════ DASHBOARD ═══════════ -->
+    <div id="dashboard" class="admin-dashboard">
+
+        <!-- Top bar -->
+        <div class="admin-topbar">
+            <h1>Portfolio CMS</h1>
+            <div class="user-info">
+                <span id="user-label">—</span>
+                <button id="logout-btn" class="btn-outline">Logout</button>
+            </div>
+        </div>
+
+        <div class="admin-body">
+
+            <!-- Sidebar -->
+            <nav class="admin-sidebar">
+                <button class="tab-btn active" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="stack">Stack</button>
+                <button class="tab-btn" data-tab="timeline">Timeline</button>
+                <button class="tab-btn" data-tab="blogs">Blogs</button>
+                <button class="tab-btn" data-tab="projects">Projects</button>
+                <button class="tab-btn" data-tab="casestudies">Case Studies</button>
+                <button class="tab-btn" data-tab="contact">Contact</button>
+                <button class="tab-btn" data-tab="socials">Socials</button>
+                <button class="tab-btn" data-tab="settings">Site Settings</button>
+            </nav>
+
+            <!-- Content panels -->
+            <div class="admin-content">
+
+                <!-- ABOUT -->
+                <div class="tab-panel active" id="panel-about">
+                    <h2 class="panel-title">About Section</h2>
+                    <p class="panel-desc">Edit the about text displayed on the home page. Supports HTML.</p>
+                    <div class="edit-form">
+                        <div class="field">
+                            <label>About HTML</label>
+                            <textarea id="about-html" rows="8"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn-save" onclick="Admin.saveAbout()">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STACK -->
+                <div class="tab-panel" id="panel-stack">
+                    <h2 class="panel-title">Tech Stack</h2>
+                    <p class="panel-desc">Manage tool categories and individual tools.</p>
+                    <div id="stack-editor"></div>
+                    <div class="form-actions">
+                        <button class="btn-save" onclick="Admin.saveStack()">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- TIMELINE -->
+                <div class="tab-panel" id="panel-timeline">
+                    <h2 class="panel-title">Timeline</h2>
+                    <p class="panel-desc">Edit education and experience entries.</p>
+                    <div id="timeline-editor"></div>
+                    <div class="form-actions">
+                        <button class="btn-save" onclick="Admin.saveTimeline()">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- BLOGS -->
+                <div class="tab-panel" id="panel-blogs">
+                    <h2 class="panel-title">Blogs</h2>
+                    <p class="panel-desc">Add, edit, or delete blog entries.</p>
+                    <button class="btn-add" onclick="Admin.addCard('blogs')">+ Add Blog</button>
+                    <div id="blogs-list" class="item-list"></div>
+                    <div id="blogs-edit"></div>
+                    <div class="form-actions" id="blogs-save-row" style="display:none">
+                        <button class="btn-save" onclick="Admin.saveCards('blogs')">Save All Changes</button>
+                    </div>
+                </div>
+
+                <!-- PROJECTS -->
+                <div class="tab-panel" id="panel-projects">
+                    <h2 class="panel-title">Projects</h2>
+                    <p class="panel-desc">Add, edit, or delete project entries.</p>
+                    <button class="btn-add" onclick="Admin.addCard('projects')">+ Add Project</button>
+                    <div id="projects-list" class="item-list"></div>
+                    <div id="projects-edit"></div>
+                    <div class="form-actions" id="projects-save-row" style="display:none">
+                        <button class="btn-save" onclick="Admin.saveCards('projects')">Save All Changes</button>
+                    </div>
+                </div>
+
+                <!-- CASE STUDIES -->
+                <div class="tab-panel" id="panel-casestudies">
+                    <h2 class="panel-title">Case Studies</h2>
+                    <p class="panel-desc">Add, edit, or delete case study entries.</p>
+                    <button class="btn-add" onclick="Admin.addCard('casestudies')">+ Add Case Study</button>
+                    <div id="casestudies-list" class="item-list"></div>
+                    <div id="casestudies-edit"></div>
+                    <div class="form-actions" id="casestudies-save-row" style="display:none">
+                        <button class="btn-save" onclick="Admin.saveCards('casestudies')">Save All Changes</button>
+                    </div>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="tab-panel" id="panel-contact">
+                    <h2 class="panel-title">Contact Info</h2>
+                    <p class="panel-desc">Edit email, phone, and contact page description.</p>
+                    <div class="edit-form">
+                        <div class="form-row">
+                            <div class="field">
+                                <label>Email</label>
+                                <input type="email" id="contact-email">
+                            </div>
+                            <div class="field">
+                                <label>Phone</label>
+                                <input type="tel" id="contact-phone">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Description</label>
+                            <textarea id="contact-desc" rows="3"></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn-save" onclick="Admin.saveContact()">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SOCIALS -->
+                <div class="tab-panel" id="panel-socials">
+                    <h2 class="panel-title">Social Links</h2>
+                    <p class="panel-desc">Edit social media links shown in footer and contact page.</p>
+                    <div id="socials-editor"></div>
+                    <button class="btn-add" onclick="Admin.addSocial()">+ Add Social</button>
+                    <div class="form-actions">
+                        <button class="btn-save" onclick="Admin.saveSocials()">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- SITE SETTINGS -->
+                <div class="tab-panel" id="panel-settings">
+                    <h2 class="panel-title">Site Settings</h2>
+                    <p class="panel-desc">Global site branding and metadata.</p>
+                    <div class="edit-form">
+                        <div class="form-row">
+                            <div class="field">
+                                <label>Site Name</label>
+                                <input type="text" id="site-name">
+                            </div>
+                            <div class="field">
+                                <label>Tagline</label>
+                                <input type="text" id="site-tagline">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="field">
+                                <label>Location (shown in navbar)</label>
+                                <input type="text" id="site-location">
+                            </div>
+                            <div class="field">
+                                <label>Built In (shown in footer)</label>
+                                <input type="text" id="site-builtin">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn-save" onclick="Admin.saveSettings()">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="admin-toast" class="admin-toast"></div>
+
+    <script src="../js/github-api.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

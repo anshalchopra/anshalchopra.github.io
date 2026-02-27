@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const isSubPage = pathname.includes('/blogs/') ||
         pathname.includes('/projects/') ||
         pathname.includes('/case-studies/') ||
-        pathname.includes('/socials/') ||
-        pathname.includes('/contact/');
+        pathname.includes('/contact/') ||
+        pathname.includes('/admin/');
 
     const prefix = isSubPage ? '../' : '';
 
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: 'Blogs', link: prefix + 'blogs/index.html' },
         { name: 'Projects', link: prefix + 'projects/index.html' },
         { name: 'Case Studies', link: prefix + 'case-studies/index.html' },
-        { name: 'Socials', link: prefix + 'socials/index.html' },
         { name: 'Contact', link: prefix + 'contact/index.html' }
     ];
 
@@ -124,44 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
         setInterval(fetchWeather, 600000);
     }
 
-    // --- Timeline Interaction Logic ---
-    const timelineContainers = document.querySelectorAll('.timeline-container');
-    const overlay = document.getElementById('timeline-overlay');
-
-    if (timelineContainers.length > 0 && overlay) {
-        timelineContainers.forEach(container => {
-            container.style.cursor = 'pointer'; // Visual cue
-
-            container.addEventListener('click', (e) => {
-                if (!container.classList.contains('expanded')) {
-                    closeAllCards();
-                    container.classList.add('expanded');
-                    document.body.classList.add('timeline-expanded');
-                    overlay.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    // If already expanded, clicking it closes it
-                    closeAllCards();
-                }
-            });
-        });
-
-        // Close on overlay click
-        overlay.addEventListener('click', closeAllCards);
-
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeAllCards();
-        });
-
-        function closeAllCards() {
-            timelineContainers.forEach(c => c.classList.remove('expanded'));
-            document.body.classList.remove('timeline-expanded');
-            overlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    }
-
     // --- Scroll Reveal Logic ---
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
@@ -171,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.15 // Trigger when 15% of the section is visible
+        threshold: 0.15
     });
 
     revealElements.forEach(el => revealObserver.observe(el));

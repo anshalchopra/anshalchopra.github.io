@@ -1,0 +1,48 @@
+{
+    "site": {
+        "name": "Anshal Chopra",
+        "tagline": "Data Scientist · Data Engineer · Analytics Engineer",
+        "location": "Burnaby, BC",
+        "builtIn": "Vancouver",
+        "headshotImg": "assets/images/Linkedin Headshot.jpeg"
+    },
+    "about": {
+        "html": "<p>End-to-end <span class=\"highlight\">Data Scientist</span> and <span class=\"highlight\">Pipeline Developer</span> driven by the complexities of financial systems. I am obsessed with extracting predictive signals from <span class=\"highlight\">equity markets</span> and <span class=\"highlight\">payment ledgers</span> using rigorous <span class=\"highlight\">NLP</span> and <span class=\"highlight\">time-series forecasting</span>.</p><p>I own the entire stack: from engineering the robust <span class=\"highlight\">ETL pipelines</span> that ingest the data, to utilizing advanced <span class=\"highlight\">ML</span> for prediction, to deploying the final models into production. I build the infrastructure, train the math, and ship the code.</p>"
+    },
+    "contact": {
+        "email": "anshalc.py@gmail.com",
+        "phone": "+1 (236) 865-4900",
+        "description": "Open to full-time roles, freelance projects, and research collaborations in data science, analytics engineering, and financial AI systems."
+    },
+    "socials": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/anshalc",
+            "icon": "linkedin"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://www.github.com/anshalchopra",
+            "icon": "github"
+        },
+        {
+            "name": "Medium",
+            "url": "https://medium.com/@anshalchopra",
+            "icon": "medium"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/anshal_chopra",
+            "icon": "instagram"
+        },
+        {
+            "name": "Threads",
+            "url": "https://www.threads.com/@anshal_chopra",
+            "icon": "threads"
+        }
+    ],
+    "github": {
+        "owner": "anshalchopra",
+        "repo": "anshalchopra.github.io"
+    }
+}
