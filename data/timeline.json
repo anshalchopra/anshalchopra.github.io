@@ -41,6 +41,13 @@
                 "org": "Canadian Tire Corporation",
                 "logo": "assets/images/Canadian Tire.png",
                 "body": "<ul><li>Designed a normalized 3NF SQL schema to replace legacy flat-files, implementing strict data validation checks to ensure a robust foundation for real-time Power BI dashboards.</li><li>Engineered a performance optimization for Bill of Lading (BOL) validation, reducing query runtime by 85% (from 20 minutes to under 3 minutes) via targeted SQL indexing and join restructuring.</li><li>Automated ETL workflows using Python, SQL, and Azure, saving $50k+ annually in manual processing costs and eliminating human error in financial reporting.</li></ul>"
+            },
+            {
+                "year": "Aug 2024 – Dec 2024",
+                "title": "Data Strategy Consultant (Capstone)",
+                "org": "Simon Fraser University — Covenant House & Slalom Consulting",
+                "logo": "assets/images/Simon Fraser University.png",
+                "body": "<ul><li>Partnered with Slalom Consulting to analyze 1M+ service records, utilizing PCA and Random Forest to reduce dimensionality (from 120 to 20 variables) and identify key drivers of youth housing outcomes.</li><li>Built survival analysis models to predict changes in length of stay, identifying specific interventions that improved retention rates by 15% across the target demographic.</li><li>Delivered a predictive Tableau dashboard that directly influenced the adoption of two new data-driven intake protocols by non-profit leadership.</li></ul>"
             }
         ]
     }
