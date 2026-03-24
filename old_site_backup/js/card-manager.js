@@ -36,7 +36,7 @@
         const el = document.createElement('article');
         el.className = 'card-item';
         el.dataset.id = card.id;
-        const img = card.img || '../assets/images/banner.png';
+        const img = card.img || '../assets/images/banner.jpg';
 
         el.innerHTML = `
             <span class="card-tag">${esc(card.tag)}</span>
@@ -91,7 +91,7 @@
         const modal = document.getElementById('card-modal');
         if (!overlay || !modal) return;
         document.getElementById('modal-tag-text').textContent = card.tag || '';
-        document.getElementById('modal-img-el').src = card.img || '../assets/images/banner.png';
+        document.getElementById('modal-img-el').src = card.img || '../assets/images/banner.jpg';
         document.getElementById('modal-img-el').alt = card.title || '';
         document.getElementById('modal-title-el').textContent = card.title || '';
         document.getElementById('modal-sub-el').textContent = card.sub || '';

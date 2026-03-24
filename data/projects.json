@@ -6,7 +6,7 @@
         "sub": "Python · Kafka · Snowflake",
         "description": "Streaming POS events via Kafka → dbt → live Streamlit dashboard. 50 k events/min at sub-second latency.",
         "body": "An end-to-end <span class='modal-highlight'>streaming pipeline</span> ingesting point-of-sale events via Kafka, transforming them in dbt, and surfacing a live Streamlit dashboard. Handles 50 k events/min at sub-second latency.",
-        "img": "../assets/images/banner.png"
+        "img": "../assets/images/banner.jpg"
     },
     {
         "id": "proj_02",
@@ -51,7 +51,7 @@
         "sub": "Python · Prophet · Airflow",
         "description": "200+ SKU forecasts with holiday regressors and zero-touch weekly retraining via Airflow.",
         "body": "Weekly demand forecasts for 200+ product SKUs using <span class='modal-highlight'>Facebook Prophet with holiday regressors</span> and multiplicative seasonality. Orchestrated with Airflow for zero-touch weekly retraining.",
-        "img": "../assets/images/banner.png"
+        "img": "../assets/images/banner.jpg"
     },
     {
         "id": "proj_07",

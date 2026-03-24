@@ -4,7 +4,7 @@
         "tagline": "Data Scientist · Data Engineer · Analytics Engineer",
         "location": "Burnaby, BC",
         "builtIn": "Vancouver",
-        "headshotImg": "assets/images/Linkedin Headshot.jpeg"
+        "headshotImg": "assets/images/Linkedin Headshot.png"
     },
     "about": {
         "html": "<p>End-to-end <span class=\"highlight\">Data Scientist</span> and <span class=\"highlight\">Pipeline Developer</span> driven by the complexities of financial systems. I am obsessed with extracting predictive signals from <span class=\"highlight\">equity markets</span> and <span class=\"highlight\">payment ledgers</span> using rigorous <span class=\"highlight\">NLP</span> and <span class=\"highlight\">time-series forecasting</span>.</p><p>I own the entire stack: from engineering the robust <span class=\"highlight\">ETL pipelines</span> that ingest the data, to utilizing advanced <span class=\"highlight\">ML</span> for prediction, to deploying the final models into production. I build the infrastructure, train the math, and ship the code.</p>"

@@ -15,7 +15,7 @@
         "sub": "Retail Ops · Process Mining",
         "description": "Process mining on warehouse data reducing order processing time from 4.1 h to 2.6 h.",
         "body": "Applied <span class='modal-highlight'>process mining to warehouse scan data</span> to surface hidden bottlenecks in the pick-pack-ship cycle. Recommendations reduced average order processing time from 4.1 h to 2.6 h.",
-        "img": "../assets/images/banner.png"
+        "img": "../assets/images/banner.jpg"
     },
     {
         "id": "cs_03",
@@ -51,7 +51,7 @@
         "sub": "FinTech · Logistic Regression",
         "description": "WoE + regularised LR on 5 years of originations — Gini coefficient improvement from 0.42 → 0.61.",
         "body": "Rebuilt a legacy scorecard using <span class='modal-highlight'>Weight of Evidence encoding and regularised logistic regression</span> on 5 years of loan origination data. The new scorecard improved Gini coefficient from 0.42 to 0.61.",
-        "img": "../assets/images/banner.png"
+        "img": "../assets/images/banner.jpg"
     },
     {
         "id": "cs_07",

@@ -6,7 +6,7 @@
         "sub": "Data Engineering · 8 min read",
         "description": "Designing fault-tolerant ETL pipelines with Airflow, schema evolution, and production observability instrumentation.",
         "body": "A deep-dive into designing <span class='modal-highlight'>fault-tolerant</span> ETL pipelines using modern tooling. We explore orchestration with Airflow, schema evolution strategies, and how to instrument jobs for production observability.<br><br>Key topics covered: pipeline idempotency, backfill strategies, SLAs, and cost optimisation on cloud compute.",
-        "img": "../assets/images/banner.png"
+        "img": "../assets/images/banner.jpg"
     },
     {
         "id": "blog_02",
@@ -51,7 +51,7 @@
         "sub": "Visualisation · 10 min read",
         "description": "Applying Gestalt principles and narrative structure to build executive-ready data visualisations.",
         "body": "Charts lie when we let them. Learn how to choose the right visualisation type, apply <span class='modal-highlight'>Gestalt principles</span> for pre-attentive processing, and craft a clear narrative that an executive can act on in under 30 seconds.",
-        "img": "../assets/images/banner.png"
+        "img": "../assets/images/banner.jpg"
     },
     {
         "id": "blog_07",
@@ -78,7 +78,7 @@
         "sub": "Career · 5 min read",
         "description": "What hiring managers actually look for: production code, communication, and domain fluency.",
         "body": "The market has shifted. <span class='modal-highlight'>Generalist roles are down; specialised roles are up.</span> This post distills what hiring managers actually look for: production code, communication skills, and domain fluency — not just model accuracy on Kaggle.",
-        "img": "../assets/images/Linkedin Headshot.jpeg"
+        "img": "../assets/images/Linkedin Headshot.png"
     },
     {
         "id": "blog_10",
