@@ -29,8 +29,8 @@
     --purple-30: rgba(125, 57, 235, 0.3);
     --purple-15: rgba(125, 57, 235, 0.15);
 
-    --font-heading: 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lora', serif;
 
     --nav-h: 68px;
     /* Main Content Frame (Wider per user request) */
@@ -47,7 +47,7 @@ html {
 body {
     background: var(--black);
     color: var(--white);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     overflow-x: hidden;
     position: relative;
 }
@@ -387,6 +387,11 @@ body>* {
     color: var(--lime);
 }
 
+.accent-lime {
+    color: var(--lime);
+    font-weight: 700;
+}
+
 .hero-title.typing::after,
 .hero-headline.typing::after {
     content: '|';
@@ -408,9 +413,10 @@ body>* {
 }
 
 .hero-headline {
-    font-size: 0.9rem;
-    font-weight: 300;
-    letter-spacing: 2.5px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--muted);
     margin-top: 18px;
@@ -425,9 +431,10 @@ body>* {
 .hero-body p {
     font-size: 1rem;
     font-weight: 300;
-    line-height: 1.9;
+    line-height: 2;
     color: var(--muted);
     margin-bottom: 18px;
+    letter-spacing: 0.2px;
 }
 
 .hero-body p:last-child {
@@ -470,7 +477,7 @@ body>* {
 /* NEW: Specialized Technical Console for Skills */
 .tech-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     background: rgba(198, 255, 51, 0.02);
     border: 1px solid var(--lime-15);
@@ -481,18 +488,9 @@ body>* {
     backdrop-filter: blur(10px);
 }
 
+/* Removed content as per user request */
 .tech-cards::after {
-    content: 'TECHNICAL SPECIFICATIONS — V2.0';
-    position: absolute;
-    top: -12px;
-    left: 40px;
-    background: var(--black);
-    padding: 0 15px;
-    color: var(--lime);
-    font-size: 0.6rem;
-    letter-spacing: 3px;
-    font-weight: 800;
-    border-left: 3px solid var(--lime);
+    display: none;
 }
 
 .tech-card {
@@ -533,12 +531,15 @@ body>* {
 }
 
 .tech-card-header {
-    font-size: 0.95rem;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--lime);
-    /* Lime header for skills */
+    color: var(--white);
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tech-card-sub {
@@ -667,7 +668,7 @@ body>* {
 }
 
 .exp-role {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--white);
@@ -689,7 +690,8 @@ body>* {
 .exp-bullets li {
     font-size: 0.88rem;
     line-height: 1.75;
-    color: rgba(253, 253, 253, 0.5);
+    color: rgba(253, 253, 253, 0.4);
+    font-weight: 300;
     padding-left: 18px;
     position: relative;
 }
@@ -744,7 +746,7 @@ body>* {
 }
 
 .proj-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--white);
@@ -807,7 +809,7 @@ body>* {
 }
 
 .blog-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--white);
@@ -911,6 +913,7 @@ body>* {
 }
 
 .contact-card__label {
+    font-family: var(--font-heading);
     font-size: 0.6rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -932,6 +935,7 @@ body>* {
 
 /* Socials Group */
 .contact-socials-label {
+    font-family: var(--font-heading);
     font-size: 0.65rem;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -1009,9 +1013,9 @@ body>* {
 }
 
 .footer-tagline {
-    font-size: 0.75rem;
+    font-size: 0.62rem;
     color: var(--muted);
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
 }
 
@@ -1072,3 +1076,5 @@ body>* {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* End of layout styles */

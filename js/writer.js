@@ -1,10 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* ─── WEATHER FETCHING ────────────────────────────────── */
+const fetchWeather = (async () => {
+    try {
+        // Vancouver: 49.2827, -123.1207
+        const url = 'https://api.open-meteo.com/v1/forecast?latitude=49.2827&longitude=-123.1207&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&timezone=America/Los_Angeles';
+        const response = await fetch(url);
+        if (!response.ok) throw new Error('Weather API error');
+        return await response.json();
+    } catch (err) {
+        console.error('Weather initial fetch failed:', err);
+        return null;
+    }
+})();
+
+document.addEventListener('DOMContentLoaded', async () => {
+    async function updateWeatherUI() {
+        const weatherIconEl = document.getElementById('weather-icon');
+        const weatherTempEl = document.getElementById('weather-temp');
+        const weatherHighEl = document.getElementById('weather-high');
+        const weatherLowEl  = document.getElementById('weather-low');
+
+        if (!weatherIconEl) return;
+
+        const data = await fetchWeather;
+        
+        if (data) {
+            const temp = Math.round(data.current.temperature_2m);
+            const high = Math.round(data.daily.temperature_2m_max[0]);
+            const low  = Math.round(data.daily.temperature_2m_min[0]);
+            const code = data.current.weather_code;
+
+            // WMO Weather interpretation codes (WW)
+            const weatherMap = {
+                0: '☀️', 1: '🌤️', 2: '⛅', 3: '☁️',
+                45: '🌫️', 48: '🌫️',
+                51: '🌦️', 53: '🌦️', 55: '🌦️',
+                61: '🌧️', 63: '🌧️', 65: '🌧️',
+                71: '❄️', 73: '❄️', 75: '❄️', 77: '❄️',
+                80: '🌦️', 81: '🌧️', 82: '🌧️',
+                85: '❄️', 86: '❄️',
+                95: '⛈️', 96: '⛈️', 99: '⛈️'
+            };
+
+            weatherIconEl.textContent = weatherMap[code] || '⛅';
+            weatherTempEl.textContent = `${temp}°C`;
+            weatherHighEl.textContent = high;
+            weatherLowEl.textContent  = low;
+        } else {
+            // Fallback
+            weatherIconEl.textContent = '🌥️';
+            weatherTempEl.textContent = '8°C';
+            weatherHighEl.textContent = '10';
+            weatherLowEl.textContent  = '4';
+        }
+    }
+    updateWeatherUI();
+
 
     /* ─── TYPEWRITER ─────────────────────────────────────── */
     const titleEl    = document.getElementById('typewriter-title');
     const headlineEl = document.getElementById('typewriter-headline');
     const titleText    = "Hi, I'm <span class='neon-span'>Anshal Chopra</span>";
-    const headlineText = "Analytics Engineer | Business Intelligence Specialist";
+    const headlineText = "<span class='accent-lime'>Analytics Engineer</span> | <span class='accent-lime'>Business Intelligence Specialist</span>";
 
     function typeWriter(el, html, speed, callback) {
         // Strip tags to get visible text length, then type char by char

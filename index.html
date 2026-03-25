@@ -8,13 +8,13 @@
     <meta name="description"
         content="Anshal Chopra — Analytics Engineer & BI Specialist building scalable data pipelines and dashboards.">
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,300;0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
- 
+
     <!-- ── NAVBAR ──────────────────────────────────────────── -->
     <nav class="navbar">
         <div class="navbar-inner">
@@ -28,14 +28,17 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-right">
-                <div class="weather-widget">
+                <div class="weather-widget" id="weather-widget">
                     <a href="https://en.wikipedia.org/wiki/Vancouver" target="_blank" class="weather-city-link">
                         <span class="weather-city">Vancouver</span>
                     </a>
                     <div class="weather-row">
-                        <span>🌧️</span>
-                        <span class="weather-temp">6°C</span>
-                        <div class="weather-details"><span>H: 10°</span><span>L: 4°</span></div>
+                        <span id="weather-icon">--</span>
+                        <span class="weather-temp" id="weather-temp">--°C</span>
+                        <div class="weather-details">
+                            <span>H: <span id="weather-high">--</span>°</span>
+                            <span>L: <span id="weather-low">--</span>°</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,7 +47,7 @@
 
     <main>
         <div class="grid-overlay"></div>
- 
+
         <!-- ══ ABOUT (dark) ──────────────────────────────────── -->
         <section id="about" class="about-section section-dark">
             <div class="about-grid">
@@ -60,14 +63,13 @@
                         <p>I build the technical infrastructure that transforms raw data into reliable business
                             strategy. My focus is on engineering scalable, autonomous pipelines that eliminate manual
                             intervention and ensure data integrity from the start.</p>
-                        <p>As an Analytics Engineer, I develop the underlying models and automation required for
+                        <p>As an Analytics Engineer, I develop the underlying models
+                            and automation required for
                             accurate, real-time insights. By prioritizing data quality and high-integrity systems, I
                             help organizations move from questioning their metrics to using them to drive growth.</p>
                     </div>
                 </div>
-                </div> <!-- Closes hero-grid -->
-
-            </div>
+            </div> <!-- Closes hero-grid -->
         </section>
 
         <!-- ══ SKILLS ────────────────────────────────────────── -->
@@ -76,7 +78,7 @@
                 <h2 class="section-heading reveal">Skills</h2>
                 <div class="tech-cards">
                     <div class="tech-card reveal">
-                        <div class="tech-card-header">Data Warehousing &amp; Storage</div>
+                        <div class="tech-card-header">Data Warehousing</div>
                         <div class="tech-card-sub">Foundation of the data architecture</div>
                         <div class="tech-pills">
                             <div class="tech-pill"><img src="assets/images/tools/snowflake.svg"
@@ -86,7 +88,7 @@
                         </div>
                     </div>
                     <div class="tech-card reveal">
-                        <div class="tech-card-header">Orchestration &amp; Transformation</div>
+                        <div class="tech-card-header">Data Pipelines</div>
                         <div class="tech-card-sub">Engines behind autonomous pipelines</div>
                         <div class="tech-pills">
                             <div class="tech-pill"><img src="assets/images/tools/dbt.svg" alt=""><span>dbt</span>
@@ -100,10 +102,12 @@
                         </div>
                     </div>
                     <div class="tech-card reveal">
-                        <div class="tech-card-header">Analytics &amp; Processing</div>
-                        <div class="tech-card-sub">Core scripting and data manipulation</div>
+                        <div class="tech-card-header">Programming</div>
+                        <div class="tech-card-sub">Core scripting and data processing</div>
                         <div class="tech-pills">
                             <div class="tech-pill"><img src="assets/images/tools/python.svg" alt=""><span>Python</span>
+                            </div>
+                            <div class="tech-pill"><img src="assets/images/tools/postgresql.svg" alt=""><span>SQL</span>
                             </div>
                             <div class="tech-pill"><img src="assets/images/tools/pandas.svg" alt=""><span>Pandas</span>
                             </div>
@@ -112,18 +116,21 @@
                         </div>
                     </div>
                     <div class="tech-card reveal">
-                        <div class="tech-card-header">Business Intelligence &amp; Data Apps</div>
-                        <div class="tech-card-sub">Where strategy becomes visible</div>
+                        <div class="tech-card-header">BI &amp; Dashboards</div>
+                        <div class="tech-card-sub">Where business strategy is visible</div>
                         <div class="tech-pills">
                             <div class="tech-pill"><img src="assets/images/tools/powerbi.svg" alt=""><span>Power
                                     BI</span></div>
                             <div class="tech-pill"><img src="assets/images/tools/streamlit.svg"
                                     alt=""><span>Streamlit</span></div>
+                            <div class="tech-pill"><img
+                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16M7 14v6m5-9v9m5-13v13'/%3E%3C/svg%3E"
+                                    alt=""><span>Tableau</span></div>
                         </div>
                     </div>
                     <div class="tech-card reveal">
-                        <div class="tech-card-header">AI-Augmented Analytics</div>
-                        <div class="tech-card-sub">RAG, LLMs &amp; semantic search</div>
+                        <div class="tech-card-header">AI &amp; Search</div>
+                        <div class="tech-card-sub">The RAG, LLMs and semantic search</div>
                         <div class="tech-pills">
                             <div class="tech-pill"><img src="assets/images/tools/openai.svg" alt=""><span>OpenAI /
                                     LLMs</span></div>
@@ -138,16 +145,14 @@
                         </div>
                     </div>
                     <div class="tech-card reveal">
-                        <div class="tech-card-header">Infrastructure &amp; CI/CD</div>
-                        <div class="tech-card-sub">Reliable deployments and environments</div>
+                        <div class="tech-card-header">Infrastructure</div>
+                        <div class="tech-card-sub">Cloud infrastructure and CI / CD</div>
                         <div class="tech-pills">
                             <div class="tech-pill"><img src="assets/images/tools/aws.svg" alt=""><span>AWS</span>
                             </div>
-                            <div class="tech-pill"><img src="assets/images/tools/githubactions.svg"
-                                    alt=""><span>GitHub
+                            <div class="tech-pill"><img src="assets/images/tools/githubactions.svg" alt=""><span>GitHub
                                     Actions</span></div>
-                            <div class="tech-pill"><img src="assets/images/tools/docker.svg"
-                                    alt=""><span>Docker</span>
+                            <div class="tech-pill"><img src="assets/images/tools/docker.svg" alt=""><span>Docker</span>
                             </div>
                         </div>
                     </div>
@@ -346,7 +351,7 @@
                         <h3 class="blog-title">SQL Window Functions Explained</h3>
                         <div class="blog-meta">6 min read</div>
                         <p class="blog-desc">RANK, LAG, LEAD, and NTILE with real-world business cases and annotated SQL
-                            examples that unlock powerful analytical queries.</p>
+                            examples that unlock powerful analytical queries for modern data practitioners.</p>
                     </div>
 
                     <div class="blog-card reveal">
@@ -354,7 +359,7 @@
                         <h3 class="blog-title">Causal Inference for Analysts</h3>
                         <div class="blog-meta">14 min read</div>
                         <p class="blog-desc">DiD, Instrumental Variables, and Regression Discontinuity designs that let
-                            you draw causal conclusions from observational business data.</p>
+                            you draw complex causal conclusions from everyday observational business datasets.</p>
                     </div>
 
                     <div class="blog-card reveal">
@@ -370,7 +375,7 @@
                         <h3 class="blog-title">Data Strategy for Growing Startups</h3>
                         <div class="blog-meta">7 min read</div>
                         <p class="blog-desc">The minimal viable data stack — from event tracking to a first warehouse —
-                            that lets a 10-person team move with the velocity of a 100-person organisation.</p>
+                            that lets a small team move with the velocity of a much larger organisation.</p>
                     </div>
 
                 </div>
@@ -433,38 +438,53 @@
                         </svg>
                         GitHub
                     </a>
+                    <a href="https://medium.com/@anshalchopra" target="_blank" rel="noopener" class="contact-social">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                            <path
+                                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+                        </svg>
+                        Medium
+                    </a>
+                    <a href="https://substack.com/@thatswhatdatasay" target="_blank" rel="noopener"
+                        class="contact-social">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                            <path
+                                d="M22.539 8.242H1.46V5.406h21.079v2.836zm0 4.381H1.46V9.783h21.079v2.84zm0 4.381H1.46V14.16h21.079v2.843zM1.46 21.063V18.52h21.079v2.541H1.46z" />
+                        </svg>
+                        Substack
+                    </a>
                 </div>
             </div>
         </section>
 
-    </main>
-
-    <!-- ── FOOTER ────────────────────────────────────────────── -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <span class="footer-name">Anshal Chopra</span>
-                    <p class="footer-tagline">Data Scientist &nbsp;·&nbsp; Analytics Engineer</p>
+        <!-- ── FOOTER (moved inside main) ───────────────────── -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <span class="footer-name">Anshal Chopra</span>
+                        <p class="footer-tagline">Analytics Engineer | Business Intelligence Specialist</p>
+                    </div>
+                    <nav class="footer-nav">
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#blogs">Blogs</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
                 </div>
-                <nav class="footer-nav">
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#blogs">Blogs</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
 
-            <div class="footer-divider"></div>
+                <div class="footer-divider"></div>
 
-            <div class="footer-bottom">
-                <span class="footer-copy">© 2026 Anshal Chopra. All rights reserved.</span>
-                <span class="footer-built">Built with <span style="color:var(--lime);">&hearts;</span> in
-                    Vancouver</span>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 Anshal Chopra. All rights reserved.</span>
+                    <span class="footer-built">Built with <span style="color:var(--lime);">&hearts;</span> in
+                        Vancouver</span>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+
+    </main>
 
     <script src="js/writer.js"></script>
 </body>
