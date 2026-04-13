@@ -12,10 +12,9 @@ const fetchWeather = (async () => {
 })();
 
 document.addEventListener('DOMContentLoaded', async () => {
-
     /* ─── TYPEWRITER ─────────────────────────────────────── */
     const headlineEl = document.getElementById('typewriter-headline');
-    
+
     if (headlineEl) {
         const headlineText = "Analytics Engineer & Data Architect";
 
@@ -52,21 +51,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         { threshold: 0.10 }
     );
 
-    // Staggered rhythmic entries
-    document.querySelectorAll('.tech-group').forEach((el, i) => {
+    // ── Unified stagger rhythm for all card-based sections ──
+    // Same base delay (0.1s) creates a consistent "waterfall" effect everywhere
+    const staggerGroups = [
+        { sel: '.tech-card.reveal', delay: 0.08 },
+        { sel: '.roadmap-item.reveal', delay: 0.10 },
+        { sel: '.proj-card.reveal', delay: 0.10 },
+        { sel: '.blog-card.reveal', delay: 0.10 },
+    ];
+
+    staggerGroups.forEach(({ sel, delay }) => {
+        document.querySelectorAll(sel).forEach((el, i) => {
+            el.style.transitionDelay = `${i * delay}s`;
+        });
+    });
+
+    // Also stagger the hero elements for a cinematic entry
+    document.querySelectorAll('.hero-right .reveal').forEach((el, i) => {
         el.style.transitionDelay = `${i * 0.12}s`;
-    });
-
-    document.querySelectorAll('.tl-card').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 0.10}s`;
-    });
-
-    document.querySelectorAll('.proj-card').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 0.15}s`;
-    });
-
-    document.querySelectorAll('.blog-card').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 0.15}s`;
     });
 
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
