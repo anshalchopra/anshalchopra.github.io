@@ -299,31 +299,31 @@ h3 {
 }
 
 .profile-overview {
-  position: relative;
-  min-height: 24rem;
-  margin-bottom: var(--space-12);
-  padding: var(--space-16) var(--space-6) var(--space-8);
-  border: 1px solid var(--color-border);
-  border-top: 0;
-  border-radius: 0 0 var(--radius-section) var(--radius-section);
-  background: var(--color-paper);
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+  margin-bottom: 0;
+  padding-block: var(--space-8);
+  border-top: 2px solid var(--color-text);
+  background: transparent;
 }
 
 .profile-photo {
-  position: absolute;
-  top: -6rem;
-  left: var(--space-6);
-  width: 12rem;
-  height: 12rem;
-  border: var(--space-1) solid var(--color-background);
+  position: static;
+  width: 14rem;
+  height: 14rem;
+  border: 1px solid var(--color-border);
   border-radius: 50%;
-  box-shadow: 0 1rem 2rem rgba(37, 37, 70, 0.12);
+  box-shadow: none;
   object-fit: cover;
   object-position: center;
 }
 
 .profile-content {
-  max-width: var(--copy-width);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 52rem;
 }
 
 .profile-kicker {
@@ -337,7 +337,7 @@ h3 {
 
 .profile-content h2 {
   margin-bottom: var(--space-1);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(3rem, 6vw, 5.5rem);
   letter-spacing: var(--tracking-heading);
   line-height: var(--leading-heading);
 }
@@ -351,6 +351,8 @@ h3 {
 .profile-story {
   max-width: var(--copy-width);
   margin-bottom: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
 }
 
 .profile-story h3 {
@@ -773,6 +775,7 @@ h3 {
   opacity: 0;
   transform: translateY(var(--space-4));
   transition: opacity var(--duration-reveal) ease, transform var(--duration-reveal) var(--ease-standard);
+  will-change: opacity, transform;
 }
 
 .js .reveal-section > :nth-child(2) {
@@ -786,6 +789,7 @@ h3 {
 .js .reveal-section.is-visible > * {
   opacity: 1;
   transform: translateY(0);
+  will-change: auto;
 }
 
 .section-arrival > * {
@@ -910,18 +914,20 @@ h3 {
   }
 
   .profile-overview {
-    min-height: 24rem;
-    margin-bottom: var(--space-8);
-    padding: var(--space-12) var(--space-3) var(--space-6);
-    border-radius: 0 0 var(--radius-section-mobile) var(--radius-section-mobile);
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-bottom: 0;
+    padding-block: var(--space-8);
   }
 
   .profile-photo {
-    top: -4.5rem;
-    left: var(--space-3);
-    width: 9rem;
-    height: 9rem;
-    border-width: var(--space-1);
+    width: 10rem;
+    height: 10rem;
+    border-width: 1px;
+  }
+
+  .profile-content h2 {
+    font-size: clamp(3rem, 15vw, 4.5rem);
   }
 
   .profile-actions {
