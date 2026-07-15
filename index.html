@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Primary navigation">
+        <a class="logo" href="#home" aria-label="Anshal, home">anshal<span aria-hidden="true">.</span></a>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero-carousel" aria-label="Areas of expertise" aria-roledescription="carousel">
+        <div class="hero-masthead" aria-hidden="true">
+          <p>Anshal Chopra / Portfolio</p>
+          <p>Vancouver, BC / Vol. 01</p>
+        </div>
+
+        <div class="hero-slides">
+          <article class="hero-slide is-active" data-slide="0" aria-roledescription="slide" aria-label="1 of 5">
+            <div class="hero-copy">
+              <p class="eyebrow">Cover story / Expertise</p>
+              <h1 class="hero-title">Business Intelligence</h1>
+              <p class="hero-description">Transforming business data into actionable insights.</p>
+              <ul class="skill-list" aria-label="Business Intelligence skills">
+                <li>Dashboards</li>
+                <li>KPI Development</li>
+                <li>Executive Reporting</li>
+                <li>Data Visualization</li>
+                <li>Performance Monitoring</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide="1" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow">Cover story / Expertise</p>
+              <h2 class="hero-title">Data Analytics</h2>
+              <p class="hero-description">Turning raw data into business decisions.</p>
+              <ul class="skill-list" aria-label="Data Analytics skills">
+                <li>SQL Analysis</li>
+                <li>Python Analytics</li>
+                <li>Statistical Analysis</li>
+                <li>Forecasting</li>
+                <li>Root Cause Analysis</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide="2" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow">Cover story / Expertise</p>
+              <h2 class="hero-title">Business Process Improvement</h2>
+              <p class="hero-description">Optimizing operations for efficiency and growth.</p>
+              <ul class="skill-list" aria-label="Business Process Improvement skills">
+                <li>Process Mapping</li>
+                <li>Workflow Optimization</li>
+                <li>Requirements Gathering</li>
+                <li>Gap Analysis</li>
+                <li>Stakeholder Management</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide="3" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow">Cover story / Expertise</p>
+              <h2 class="hero-title">Systems Analysis &amp; Design</h2>
+              <p class="hero-description">Designing technology solutions that solve business problems.</p>
+              <ul class="skill-list" aria-label="Systems Analysis and Design skills">
+                <li>Solution Design</li>
+                <li>API Integration</li>
+                <li>Data Modeling</li>
+                <li>System Architecture</li>
+                <li>Technical Documentation</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-slide="4" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
+            <div class="hero-copy">
+              <p class="eyebrow">Cover story / Expertise</p>
+              <h2 class="hero-title">Digital Transformation</h2>
+              <p class="hero-description">Helping organizations modernize with emerging technologies.</p>
+              <ul class="skill-list" aria-label="Digital Transformation skills">
+                <li>Cloud Migration</li>
+                <li>AI Automation</li>
+                <li>Process Automation</li>
+                <li>ERP / CRM</li>
+                <li>Change Management</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-previous" type="button" data-carousel="previous" aria-label="Previous specialization">←</button>
+          <div class="carousel-pagination" aria-live="polite" aria-atomic="true">
+            <p><span data-carousel-current>01</span> / 05</p>
+            <div class="carousel-progress" aria-hidden="true"><span></span></div>
+          </div>
+          <button class="carousel-pause" type="button" data-carousel="pause" aria-label="Pause automatic rotation">Pause</button>
+        </div>
+      </section>
+
+      <section class="profile-overview" aria-labelledby="profile-name">
+        <img class="profile-photo" src="assets/skills/profile-picture.png" alt="Portrait of Anshal" width="800" height="800">
+
+        <div class="profile-content">
+          <p class="profile-kicker">Hello, I’m</p>
+          <h2 id="profile-name">Anshal Chopra</h2>
+          <p class="profile-location">Vancouver, British Columbia</p>
+
+          <div class="profile-story">
+            <h3>My Story</h3>
+            <p>
+              Welcome to my portfolio. If you're here, you're probably looking for someone who's good with analytics, and I am. But that's not really what this page is about.
+            </p>
+            <p>
+              Somewhere along the way, most of our connections moved online. Somewhere along the way, we found out you can't actually build something real behind a screen, no matter how good the interface is. So before you scroll through case studies and dashboards, I wanted to tell you how I actually got here. Not the resume version. The real one.
+            </p>
+
+            <details class="story-more">
+              <summary>
+                <span class="story-more-label">See more</span>
+                <span class="story-less-label">Show less</span>
+              </summary>
+
+              <div class="story-expanded">
+                <p>
+                  I grew up in a business household, middle-class, nothing fancy. But numbers were always around me: revenue, margins, inventory, the language my family spoke without meaning to teach it. I picked it up anyway. I was the kid who wanted to know <em>why</em> something made money, not just how much.
+                </p>
+                <p>
+                  But that wasn't the plan for me. My dad wanted a pilot in the family, so a pilot I trained to become. Early mornings before school. Discipline drilled in before I understood why it mattered. Communication, problem-solving, staying calm and analytical when things go wrong at 30,000 feet. I didn't know it yet, but I was being built for something. I just assumed it was a cockpit.
+                </p>
+                <p>
+                  Then, right when it was time to actually apply, a medical condition ruled me out. Just like that. Years of training, gone in a single conversation. I remember the strange quiet after, not devastation exactly, more like standing in a room where all the furniture had just been removed. I had no backup plan, because I'd never let myself need one.
+                </p>
+                <p>
+                  Not long after, I moved to Canada. New country, no plan, and a mind that kept circling back to a version of myself that no longer existed.
+                </p>
+                <p>
+                  What followed wasn't a straight line. It rarely is. Mechatronics, because it felt close to what I'd trained for. Computer science, because it felt more useful. Environmental science, because I was still searching for a "why." None of them were wrong, exactly. None of them were quite <em>it</em>, either.
+                </p>
+                <p>
+                  Then a friend mentioned data science, almost in passing, the kind of comment that doesn't feel important until, months later, you realize it changed everything. And there it was: the curiosity from those childhood dinner-table conversations, the discipline from years of training for a career I never got to have, the calm-under-pressure thinking that was supposed to keep a plane in the air. All of it had actually been preparing me for this the whole time. I just hadn't known what "this" was yet.
+                </p>
+                <p>
+                  That's the part I want you to take from this page, more than any chart or dashboard: behind every analysis is a person who got there in a roundabout, occasionally painful, deeply human way. That's what I think we lose when everything moves online, not the information, but the story behind it. So if you're here for the analytics, you're in good hands. But I'm hoping you leave remembering the person behind them, too.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <p class="profile-cta-intro">Now that you know a bit about me...</p>
+
+          <div class="profile-actions">
+            <a class="button button-primary" href="#contact">Let’s talk</a>
+            <a class="button button-secondary" href="#work">View my work</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-section reveal-section" aria-labelledby="featured-title">
+        <header class="editorial-heading">
+          <p class="section-index">01 / Featured</p>
+          <h2 id="featured-title">Now that we’ve become friends, explore.</h2>
+          <p>A first look at the work, ideas, and questions shaping this portfolio.</p>
+        </header>
+
+        <div class="magazine-grid">
+          <article class="feature-card feature-lead">
+            <div class="feature-visual visual-analytics" aria-hidden="true"></div>
+            <div class="feature-copy">
+              <p class="article-meta">Case study · Coming soon</p>
+              <h3>When dashboards become decisions.</h3>
+              <p>A future case study about turning scattered business signals into a clear decision-making system.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-visual visual-process" aria-hidden="true"></div>
+            <div class="feature-copy">
+              <p class="article-meta">Process · Coming soon</p>
+              <h3>Designing the work behind the work.</h3>
+              <p>Notes on making complex workflows simpler, faster, and easier to understand.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-visual visual-writing" aria-hidden="true"></div>
+            <div class="feature-copy">
+              <p class="article-meta">Writing · Coming soon</p>
+              <h3>What the numbers leave unsaid.</h3>
+              <p>Short essays about analytics, business judgment, and the people behind the data.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="editorial-section reveal-section" aria-labelledby="work-title">
+        <header class="editorial-heading editorial-heading-inline">
+          <p class="section-index">02 / Work</p>
+          <h2 id="work-title">Selected work, built around real questions.</h2>
+          <p>Detailed case studies will live here as the portfolio grows.</p>
+        </header>
+
+        <div class="work-index">
+          <article class="index-entry">
+            <p class="entry-number">01</p>
+            <div>
+              <p class="article-meta">Business Intelligence</p>
+              <h3>Executive performance dashboard</h3>
+            </div>
+            <p>A placeholder for a case study about KPI design, reporting, and decision support.</p>
+            <span>Coming soon</span>
+          </article>
+
+          <article class="index-entry">
+            <p class="entry-number">02</p>
+            <div>
+              <p class="article-meta">Data Analytics</p>
+              <h3>From raw data to operating insight</h3>
+            </div>
+            <p>A placeholder for an analytical project using SQL, Python, and statistical thinking.</p>
+            <span>Coming soon</span>
+          </article>
+
+          <article class="index-entry">
+            <p class="entry-number">03</p>
+            <div>
+              <p class="article-meta">Transformation</p>
+              <h3>Modernizing a business workflow</h3>
+            </div>
+            <p>A placeholder for a systems and process improvement story.</p>
+            <span>Coming soon</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="blogs" class="editorial-section reveal-section" aria-labelledby="blogs-title">
+        <header class="editorial-heading editorial-heading-inline">
+          <p class="section-index">03 / Blogs</p>
+          <h2 id="blogs-title">Field notes from an analytical mind.</h2>
+          <p>Essays, observations, and useful ideas will be published here.</p>
+        </header>
+
+        <div class="blog-grid">
+          <article class="blog-entry">
+            <p class="article-meta">Essay 01 · Coming soon</p>
+            <h3>Why a clear question matters more than a perfect dashboard</h3>
+            <p>A placeholder for practical writing about analytics and business decisions.</p>
+          </article>
+          <article class="blog-entry">
+            <p class="article-meta">Essay 02 · Coming soon</p>
+            <h3>The human judgment hiding inside every metric</h3>
+            <p>A placeholder for reflections on context, assumptions, and responsible analysis.</p>
+          </article>
+          <article class="blog-entry">
+            <p class="article-meta">Essay 03 · Coming soon</p>
+            <h3>What pilot training taught me about analytical thinking</h3>
+            <p>A placeholder connecting discipline, communication, and calm problem-solving.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section reveal-section" aria-labelledby="contact-title">
+        <p class="section-index">04 / Contact</p>
+        <div class="contact-layout">
+          <h2 id="contact-title">Have a problem worth thinking through?</h2>
+          <div class="contact-copy">
+            <p>I’m interested in thoughtful analytics work, useful technology, and conversations that begin with a good question.</p>
+            <p class="contact-status">Contact details will be added here soon.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Made with care in Vancouver.</p>
+      <p>© <span id="current-year"></span> Anshal</p>
+    </footer>
+  </body>
+</html>
